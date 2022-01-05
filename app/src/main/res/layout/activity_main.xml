@@ -153,33 +153,30 @@
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:background="@drawable/borderline"
-                app:layout_constraintTop_toBottomOf="@id/back_image"
                 app:layout_constraintBottom_toTopOf="@id/contents_title"
-                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/view_2_line"
-                />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/back_image" />
 
             <View
                 android:id="@+id/view_2_line"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:background="@drawable/borderline"
-                app:layout_constraintTop_toBottomOf="@id/back_image"
                 app:layout_constraintBottom_toTopOf="@id/contents_title"
-                app:layout_constraintStart_toEndOf="@id/view_1_line"
                 app:layout_constraintEnd_toStartOf="@id/view_3_line"
-                />
+                app:layout_constraintStart_toEndOf="@id/view_1_line"
+                app:layout_constraintTop_toBottomOf="@id/back_image" />
 
             <View
                 android:id="@+id/view_3_line"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:background="@drawable/borderline"
-                app:layout_constraintTop_toBottomOf="@id/back_image"
                 app:layout_constraintBottom_toTopOf="@+id/contents_title"
-                app:layout_constraintStart_toEndOf="@id/view_2_line"
                 app:layout_constraintEnd_toEndOf="parent"
-                />
+                app:layout_constraintStart_toEndOf="@id/view_2_line"
+                app:layout_constraintTop_toBottomOf="@id/back_image" />
 
             <TextView
                 android:id="@+id/view_1"
@@ -228,7 +225,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:paddingTop="10dp"
-                android:paddingBottom="10dp"
+                android:paddingBottom="20dp"
                 android:text="5위  1.8%"
                 android:textAlignment="center"
                 android:textSize="18sp"
@@ -245,7 +242,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:paddingTop="10dp"
-                android:paddingBottom="10dp"
+                android:paddingBottom="20dp"
                 android:text="8.2"
                 android:textAlignment="center"
                 android:textSize="18sp"
@@ -261,7 +258,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:paddingTop="10dp"
-                android:paddingBottom="10dp"
+                android:paddingBottom="20dp"
                 android:text="839,399명"
                 android:textAlignment="center"
                 android:textSize="18sp"
@@ -284,7 +281,8 @@
                 android:id="@+id/contents_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="5dp"
                 android:text="줄거리"
                 android:textSize="25sp"
                 android:textStyle="bold"
@@ -295,42 +293,177 @@
                 android:id="@+id/contents"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="sdfdsfdsf"
-                app:layout_constraintTop_toBottomOf="@id/contents_title"
-                app:layout_constraintLeft_toLeftOf="parent"/>
+                android:text="군도, 백성을 구하라!
+\n양반과 탐관오리들의 착취가 극에 달했던 조선 철종 13년
+\n힘 없는 백성의 편이 되어 세상을 바로잡고자 하는 의적떼인
+\n군도(群盜), 지리산 추설이 있었다.
+\n
+\n쌍칼 도치 vs 백성의 적 조윤
+\n잦은 자연재해, 기근과 관의 횡포까지 겹쳐 백성들의 삶이
+\n날로 피폐해져 가는 사이, 나주 대부호의 서자로 조선
+\n최고의 무관 출신인 조윤은 극악한 수법으로 양민들을 수탈
+\n삼남지방 최고의 대부호로 성장한다. 한편 소, 돼지를 잡아
+\n근근이 살아가던 천한 백정 돌무치는 죽어도 잊지 못할
+\n끔찍한 일을 당한 뒤 군도에 합류. 지리산 추설의 신 거성
+\n(新 巨星) 도치로 거듭난다.
+\n
+\n뭉치면 백성, 흩어지면 도적!
+\n망할 세상을 뒤집기 위해, 백성이 주인인 새 세상을 향해
+\n도치를 필두로 한 군도는 백성의 적, 조윤과 한 판 승부를
+\n시작하는데..."
+                android:textSize="17sp"
+                android:paddingBottom="10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/contents_title" />
 
 
-            <TextView
-                android:id="@+id/makers"
+            <View
+                android:id="@+id/bgline_2"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="20dp"
-                android:background="@drawable/borderline"
-                android:text="감독/출연
-                \n출연"
-                android:textSize="20sp"
+                android:layout_height="10dp"
+                android:background="@drawable/gradation"
+                app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/contents" />
 
             <TextView
-                android:id="@+id/rates"
+                android:id="@+id/makers_title"
                 android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="감독/출연"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/bgline_2" />
+
+            <TextView
+                android:id="@+id/makers"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="감독\n출연"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:paddingBottom="10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/makers_title"/>
+
+            <TextView
+                android:id="@+id/makers_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="이재윤\n문진기, 홍현교"
+                android:textSize="18sp"
+                app:layout_constraintLeft_toRightOf="@id/makers"
+                app:layout_constraintTop_toBottomOf="@id/makers_title"
+                />
+
+
+            <View
+                android:id="@+id/bgline_3"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@drawable/gradation"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/makers" />
+
+            <TextView
+                android:id="@+id/rates"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/borderline"
                 android:text="한줄평"
                 android:textSize="20sp"
-                app:layout_constraintTop_toBottomOf="@id/makers" />
+                android:textStyle="bold"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/bgline_3" />
+
+            <ImageView
+                android:id="@+id/image_review"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_review_selected"
+                app:layout_constraintRight_toLeftOf="@id/review_write"
+                app:layout_constraintTop_toBottomOf="@id/bgline_3"
+                android:paddingTop="10dp"/>
 
             <TextView
-                android:id="@+id/sns_link"
+                android:id="@+id/review_write"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="20dp"
-                android:background="@drawable/borderline"
-                android:text="sns 바로가기"
-                android:textSize="20sp"
+                android:layout_height="wrap_content"
+                android:text="작성하기"
+                android:textColor="#FF5E00"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
+                app:layout_constraintTop_toBottomOf="@id/bgline_3"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/simple_rates"
+                />
+
+            <View
+                android:id="@+id/simple_rates"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                app:layout_constraintTop_toBottomOf="@id/rates"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/rates" />
+                android:background="#ffffff"/>
+
+            <Button
+                android:id="@+id/watch_review"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="모두 보기"
+                android:layout_marginBottom="30dp"
+                android:padding="10dp"
+                android:layout_margin="10dp"
+                app:layout_constraintTop_toBottomOf="@id/simple_rates"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <View
+                android:id="@+id/bgline_4"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@drawable/gradation"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/watch_review" />
+
+
+            <ImageView
+                android:id="@+id/facebook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/bgline_4"
+                android:src="@drawable/ic_facebook"/>
+
+            <ImageView
+                android:id="@+id/kakao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                app:layout_constraintLeft_toRightOf="@id/facebook"
+                app:layout_constraintTop_toBottomOf="@id/bgline_4"
+                android:src="@drawable/ic_kakao"/>
+
+            <Button
+                android:id="@+id/buy"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="예매하기"
+                android:textSize="20sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                app:layout_constraintTop_toBottomOf="@id/bgline_4"
+                app:layout_constraintLeft_toRightOf="@id/kakao"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
