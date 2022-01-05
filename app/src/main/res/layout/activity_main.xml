@@ -22,17 +22,14 @@
             android:orientation="vertical">
 
 
-
-            
-
             <View
+                android:id="@+id/back_image"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintBottom_toBottomOf="@id/view_1"
                 android:background="@drawable/gradation"
-                >
+                app:layout_constraintBottom_toTopOf="@id/view_1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
             </View>
 
@@ -54,42 +51,145 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                app:layout_constraintGuide_begin="73dp" />
+                app:layout_constraintGuide_begin="60dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="208dp" />
 
             <TextView
                 android:id="@+id/movie_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintLeft_toRightOf="@id/movie_image"
-                app:layout_constraintTop_toBottomOf="@id/guideline_1"
-                android:text="군도"
-                android:textSize="25sp"
                 android:layout_marginLeft="20dp"
+                android:paddingBottom="10dp"
+                android:text="군도"
                 android:textColor="#ffffff"
-                />
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toRightOf="@id/movie_image"
+                app:layout_constraintTop_toBottomOf="@id/guideline_1" />
 
             <ImageView
                 android:id="@+id/pegi15"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_15"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="3dp"
+                android:src="@drawable/ic_15"
                 app:layout_constraintLeft_toRightOf="@id/movie_name"
-                app:layout_constraintTop_toTopOf="@id/guideline_1"
+                app:layout_constraintTop_toTopOf="@id/guideline_1" />
+
+            <TextView
+                android:id="@+id/movie_release"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="2014.07.23 개봉"
+                android:textColor="#ffffff"
+                android:textSize="19sp"
+                app:layout_constraintLeft_toRightOf="@id/movie_image"
+                app:layout_constraintTop_toBottomOf="@id/movie_name" />
+
+            <TextView
+                android:id="@+id/movie_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="액션 / 137분"
+                android:textColor="#ffffff"
+                android:textSize="19sp"
+                app:layout_constraintLeft_toRightOf="@id/movie_image"
+                app:layout_constraintTop_toBottomOf="@id/movie_release" />
+
+            <ImageView
+                android:id="@+id/thumb_up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/ic_thumb_up"
+                app:layout_constraintBottom_toTopOf="@+id/guideline_2"
+                app:layout_constraintLeft_toRightOf="@id/movie_image" />
+
+            <TextView
+                android:id="@+id/up_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="15"
+                android:textColor="#ffffff"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/guideline_2"
+                app:layout_constraintLeft_toRightOf="@+id/thumb_up" />
+
+            <ImageView
+                android:id="@+id/thumb_down"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/ic_thumb_down"
+                app:layout_constraintBottom_toTopOf="@+id/guideline_2"
+                app:layout_constraintLeft_toRightOf="@id/up_count" />
+
+            <TextView
+                android:id="@+id/down_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="1"
+                android:textColor="#ffffff"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/guideline_2"
+                app:layout_constraintLeft_toRightOf="@+id/thumb_down" />
+
+            <View
+                android:id="@+id/view_1_line"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/borderline"
+                app:layout_constraintTop_toBottomOf="@id/back_image"
+                app:layout_constraintBottom_toTopOf="@id/contents_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/view_2_line"
                 />
 
+            <View
+                android:id="@+id/view_2_line"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/borderline"
+                app:layout_constraintTop_toBottomOf="@id/back_image"
+                app:layout_constraintBottom_toTopOf="@id/contents_title"
+                app:layout_constraintStart_toEndOf="@id/view_1_line"
+                app:layout_constraintEnd_toStartOf="@id/view_3_line"
+                />
+
+            <View
+                android:id="@+id/view_3_line"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/borderline"
+                app:layout_constraintTop_toBottomOf="@id/back_image"
+                app:layout_constraintBottom_toTopOf="@+id/contents_title"
+                app:layout_constraintStart_toEndOf="@id/view_2_line"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
 
             <TextView
                 android:id="@+id/view_1"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@drawable/borderline"
-                android:text="예매율\n5위"
-                android:textAlignment="center"
-                android:textSize="20sp"
                 android:layout_marginTop="10dp"
+                android:paddingTop="20dp"
+                android:text="예매율"
+                android:textAlignment="center"
+                android:textSize="18sp"
                 app:layout_constraintEnd_toStartOf="@+id/view_2"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
@@ -99,56 +199,105 @@
                 android:id="@+id/view_2"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@drawable/borderline"
-                android:text="평점\n8.2"
-                android:textAlignment="center"
-                android:textSize="20sp"
                 android:layout_marginTop="10dp"
+                android:paddingTop="20dp"
+                android:text="평점"
+                android:textAlignment="center"
+                android:textSize="18sp"
                 app:layout_constraintEnd_toStartOf="@+id/view_3"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/view_1"
-                app:layout_constraintTop_toBottomOf="@id/movie_image"
-                />
+                app:layout_constraintTop_toBottomOf="@id/movie_image" />
 
             <TextView
                 android:id="@+id/view_3"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@drawable/borderline"
-                android:text="누적관객수\n839,999명"
-                android:textAlignment="center"
-                android:textSize="20sp"
                 android:layout_marginTop="10dp"
+                android:paddingTop="20dp"
+                android:text="누적관객수"
+                android:textAlignment="center"
+                android:textSize="18sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/view_2"
                 app:layout_constraintTop_toBottomOf="@id/movie_image" />
 
+            <TextView
+                android:id="@+id/ticket_ratings"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="5위  1.8%"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@id/grade_ratings"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view_1"
+
+
+                />
+
+            <TextView
+                android:id="@+id/grade_ratings"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="8.2"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@id/total_count"
+                app:layout_constraintStart_toEndOf="@id/ticket_ratings"
+                app:layout_constraintTop_toBottomOf="@id/view_2"
+
+                />
+
+            <TextView
+                android:id="@+id/total_count"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="839,399명"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/grade_ratings"
+                app:layout_constraintTop_toBottomOf="@id/view_3"
+
+                />
+
             <View
                 android:id="@+id/bgline_1"
                 android:layout_width="match_parent"
                 android:layout_height="10dp"
-                app:layout_constraintTop_toBottomOf="@id/view_1"
+                android:background="@drawable/gradation"
                 app:layout_constraintLeft_toLeftOf="parent"
-                />
+                app:layout_constraintTop_toBottomOf="@id/ticket_ratings" />
+
+            <TextView
+                android:id="@+id/contents_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:text="줄거리"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/bgline_1" />
 
             <TextView
                 android:id="@+id/contents"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                android:background="@drawable/borderline"
-                android:text="왜 아무것도 나오지 않는 것 입니까?
-                \n질문하신 자기소개서 예시에 대해
-                \n마지막으로 자유자기소개서 작성을 위해 실제로 합격한 기업/직무별
-                \n합격자기소개서 남겨드리니 참고하시어 본인만의
-                \n명품 자기소개서를 만들어 보시기 바랍니다\n이\n재\n윤\n말\n미\n잘\n아아아
-                \n모 이야다~!"
-                android:textSize="20sp"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/bgline_1" />
+                android:text="sdfdsfdsf"
+                app:layout_constraintTop_toBottomOf="@id/contents_title"
+                app:layout_constraintLeft_toLeftOf="parent"/>
 
 
             <TextView
@@ -180,8 +329,8 @@
                 android:background="@drawable/borderline"
                 android:text="sns 바로가기"
                 android:textSize="20sp"
-                app:layout_constraintTop_toBottomOf="@id/rates"
-                app:layout_constraintLeft_toLeftOf="parent"/>
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rates" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
