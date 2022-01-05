@@ -273,7 +273,7 @@
                 android:id="@+id/bgline_1"
                 android:layout_width="match_parent"
                 android:layout_height="10dp"
-                android:background="@drawable/gradation"
+                android:background="#EAEAEA"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/ticket_ratings" />
 
@@ -293,6 +293,7 @@
                 android:id="@+id/contents"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
                 android:text="군도, 백성을 구하라!
 \n양반과 탐관오리들의 착취가 극에 달했던 조선 철종 13년
 \n힘 없는 백성의 편이 되어 세상을 바로잡고자 하는 의적떼인
@@ -312,7 +313,6 @@
 \n도치를 필두로 한 군도는 백성의 적, 조윤과 한 판 승부를
 \n시작하는데..."
                 android:textSize="17sp"
-                android:paddingBottom="10dp"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/contents_title" />
 
@@ -321,7 +321,7 @@
                 android:id="@+id/bgline_2"
                 android:layout_width="match_parent"
                 android:layout_height="10dp"
-                android:background="@drawable/gradation"
+                android:background="#EAEAEA"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/contents" />
 
@@ -329,9 +329,9 @@
                 android:id="@+id/makers_title"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="감독/출연"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
+                android:text="감독/출연"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintTop_toBottomOf="@id/bgline_2" />
@@ -340,12 +340,12 @@
                 android:id="@+id/makers"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="감독\n출연"
-                android:textStyle="bold"
-                android:textSize="18sp"
                 android:paddingBottom="10dp"
+                android:text="감독\n출연"
+                android:textSize="18sp"
+                android:textStyle="bold"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/makers_title"/>
+                app:layout_constraintTop_toBottomOf="@id/makers_title" />
 
             <TextView
                 android:id="@+id/makers_detail"
@@ -354,15 +354,14 @@
                 android:text="이재윤\n문진기, 홍현교"
                 android:textSize="18sp"
                 app:layout_constraintLeft_toRightOf="@id/makers"
-                app:layout_constraintTop_toBottomOf="@id/makers_title"
-                />
+                app:layout_constraintTop_toBottomOf="@id/makers_title" />
 
 
             <View
                 android:id="@+id/bgline_3"
                 android:layout_width="match_parent"
                 android:layout_height="10dp"
-                android:background="@drawable/gradation"
+                android:background="#EAEAEA"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/makers" />
 
@@ -371,12 +370,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
-                android:background="@drawable/borderline"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
                 android:text="한줄평"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/bgline_3" />
 
@@ -384,50 +382,49 @@
                 android:id="@+id/image_review"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:paddingTop="10dp"
                 android:src="@drawable/ic_review_selected"
                 app:layout_constraintRight_toLeftOf="@id/review_write"
-                app:layout_constraintTop_toBottomOf="@id/bgline_3"
-                android:paddingTop="10dp"/>
+                app:layout_constraintTop_toBottomOf="@id/bgline_3" />
 
             <TextView
                 android:id="@+id/review_write"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
                 android:text="작성하기"
                 android:textColor="#FF5E00"
-                android:textStyle="bold"
                 android:textSize="18sp"
-                android:paddingRight="10dp"
-                android:paddingLeft="10dp"
-                app:layout_constraintTop_toBottomOf="@id/bgline_3"
-                app:layout_constraintRight_toRightOf="parent"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@id/simple_rates"
-                />
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/bgline_3" />
 
             <View
                 android:id="@+id/simple_rates"
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
-                app:layout_constraintTop_toBottomOf="@id/rates"
+                android:background="#ffffff"
                 app:layout_constraintLeft_toLeftOf="parent"
-                android:background="#ffffff"/>
+                app:layout_constraintTop_toBottomOf="@id/rates" />
 
             <Button
                 android:id="@+id/watch_review"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="모두 보기"
+                android:layout_margin="10dp"
                 android:layout_marginBottom="30dp"
                 android:padding="10dp"
-                android:layout_margin="10dp"
-                app:layout_constraintTop_toBottomOf="@id/simple_rates"
-                app:layout_constraintLeft_toLeftOf="parent"/>
+                android:text="모두 보기"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/simple_rates" />
 
             <View
                 android:id="@+id/bgline_4"
                 android:layout_width="match_parent"
                 android:layout_height="10dp"
-                android:background="@drawable/gradation"
+                android:background="#EAEAEA"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/watch_review" />
 
@@ -437,32 +434,31 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="12dp"
+                android:src="@drawable/ic_facebook"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/bgline_4"
-                android:src="@drawable/ic_facebook"/>
+                app:layout_constraintTop_toBottomOf="@id/bgline_4" />
 
             <ImageView
                 android:id="@+id/kakao"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="12dp"
+                android:src="@drawable/ic_kakao"
                 app:layout_constraintLeft_toRightOf="@id/facebook"
-                app:layout_constraintTop_toBottomOf="@id/bgline_4"
-                android:src="@drawable/ic_kakao"/>
+                app:layout_constraintTop_toBottomOf="@id/bgline_4" />
 
             <Button
                 android:id="@+id/buy"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:text="예매하기"
-                android:textSize="20sp"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
-                app:layout_constraintTop_toBottomOf="@id/bgline_4"
+                android:text="예매하기"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toRightOf="@id/kakao"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                />
+                app:layout_constraintTop_toBottomOf="@id/bgline_4" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
