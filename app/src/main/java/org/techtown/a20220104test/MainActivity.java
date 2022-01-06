@@ -9,9 +9,11 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    TextView textView1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,5 +35,19 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+        ArrayAdapter adapter = new ArrayAdapter(this, R.layout.simple_list_item_1, R.id.list_id ,LIST_MENU);
+        ListView listview = (ListView) findViewById(R.id.listview1);
+        listview.setAdapter(adapter);
+        listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView parent, View v, int position, long id) {
+                // get TextView's Text.
+                String strText = (String) parent.getItemAtPosition(position) ;
+                // TODO : use strText
+            }
+        }) ;
+
     }
+    static final String[] LIST_MENU = {"kimsula18*****", "kimsula18*****"};
 }
