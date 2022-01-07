@@ -6,17 +6,22 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView textView1;
+    int int_upCount = 15;
+    int int_downCount = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,33 +33,81 @@ public class MainActivity extends AppCompatActivity {
          */
         setContentView(R.layout.activity_main);
 
-        /*
-         * findViewById() : ID 값을 이용해 특정 뷰를 받아오는 메서드
-         * */
 
-        /*        Button button = (Button) findViewById(R.id.buy);
-        button.setOnTouchListener(new View.OnTouchListener() {
+        //findViewById() : ID 값을 이용해 특정 뷰를 받아오는 메서드
+        TextView upCount = (TextView) findViewById(R.id.up_count);
+        TextView downCount = (TextView) findViewById(R.id.down_count);
+        Button btn_write = (Button) findViewById(R.id.review_write);
+        Button btn_seeAll = (Button) findViewById(R.id.see_all);
+        ImageButton btn_like = (ImageButton) findViewById(R.id.thumb_up);
+        ImageButton btn_dislike = (ImageButton) findViewById(R.id.thumb_down);
+
+        upCount.setText(int_upCount + "");
+        downCount.setText(int_downCount + "");
+
+
+        btn_write.setOnClickListener(new View.OnClickListener() {
             @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                return true;
+            public void onClick(View v) {
+                Toast toast = Toast.makeText(getApplicationContext(), "작성하기 버튼이 눌렸습니다", Toast.LENGTH_SHORT);
+                toast.show();
             }
         });
 
-
-        ArrayAdapter adapter = new ArrayAdapter(this, R.layout.simple_list_item_1, R.id.list_id ,LIST_MENU);
-        ListView listview = (ListView) findViewById(R.id.listview1);
-        listview.setAdapter(adapter);
-        listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        btn_seeAll.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onItemClick(AdapterView parent, View v, int position, long id) {
-                // get TextView's Text.
-                String strText = (String) parent.getItemAtPosition(position) ;
-                // TODO : use strText
+            public void onClick(View v) {
+                Toast toast = Toast.makeText(getApplicationContext(), "모두보기 버튼이 눌렸습니다", Toast.LENGTH_SHORT);
+                toast.show();
             }
-        }) ;*/
+        });
+
+        btn_like.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (btn_dislike.isActivated()) {
+                    btn_dislike.setActivated(false);
+                    int_downCount--;
+                    btn_like.setActivated(!btn_like.isActivated());
+                    int_upCount++;
+                    upCount.setText(int_upCount + "");
+                    downCount.setText(int_downCount + "");
+
+                } else if (btn_like.isActivated()) {
+                    btn_like.setActivated(false);
+                    int_upCount--;
+                    upCount.setText(int_upCount + "");
+                } else {
+                    btn_like.setActivated(!btn_like.isActivated());
+                    int_upCount++;
+                    upCount.setText(int_upCount + "");
+                }
+            }
+        });
+
+        btn_dislike.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (btn_like.isActivated()) {
+                    btn_like.setActivated(false);
+                    int_upCount--;
+                    btn_dislike.setActivated(!btn_dislike.isActivated());
+                    int_downCount++;
+                    downCount.setText(int_downCount + "");
+                    upCount.setText(int_upCount + "");
+                } else if (btn_dislike.isActivated()) {
+                    btn_dislike.setActivated(false);
+                    int_downCount--;
+                    downCount.setText(int_downCount + "");
+                } else {
+                    btn_dislike.setActivated(!btn_dislike.isActivated());
+                    int_downCount++;
+                    downCount.setText(int_downCount + "");
+                }
+            }
+        });
 
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
-
         LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(layoutManager);
         CommentAdapter adapter = new CommentAdapter();
@@ -62,11 +115,10 @@ public class MainActivity extends AppCompatActivity {
         adapter.addItem(new Comment("leejaey****", "누가 만들었나 싶을 정도로 너무 재밌다"));
         adapter.addItem(new Comment("jiseong*****", "여자랑 봤는데 너무 재밌었음(^오^)b"));
         adapter.addItem(new Comment("kimsula18****", "영화는 재밌는데 같이 본 사람이 재미없어서 실망"));
-        adapter.addItem(new Comment("sangwook5***","개쌉노잼이쥬? 이럴거면 나도 감독했지"));
+        adapter.addItem(new Comment("sangwook5***", "개쌉노잼이쥬? 이럴거면 나도 감독했지"));
 
         recyclerView.setAdapter(adapter);
 
 
     }
-//    static final String[] LIST_MENU = {"kimsula18*****", "kimsula18*****"};
 }
