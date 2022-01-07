@@ -10,6 +10,7 @@
         <entry key="..\:/ws/app/src/main/res/drawable/btn_thumbdown_selector.xml" value="0.2864583333333333" />
         <entry key="..\:/ws/app/src/main/res/drawable/btn_thumbup_selector.xml" value="0.22083333333333333" />
         <entry key="..\:/ws/app/src/main/res/drawable/button_background.xml" value="0.38229166666666664" />
+        <entry key="..\:/ws/app/src/main/res/drawable/button_buy.xml" value="0.38229166666666664" />
         <entry key="..\:/ws/app/src/main/res/drawable/button_see_all.xml" value="0.38229166666666664" />
         <entry key="..\:/ws/app/src/main/res/drawable/down_clicked.xml" value="0.3203125" />
         <entry key="..\:/ws/app/src/main/res/drawable/down_unclicked.xml" value="0.3203125" />
@@ -17,7 +18,7 @@
         <entry key="..\:/ws/app/src/main/res/drawable/ic_launcher_background.xml" value="0.22083333333333333" />
         <entry key="..\:/ws/app/src/main/res/drawable/up_clicked.xml" value="0.3203125" />
         <entry key="..\:/ws/app/src/main/res/drawable/up_unclicked.xml" value="0.3203125" />
-        <entry key="..\:/ws/app/src/main/res/layout/activity_main.xml" value="0.3094488188976378" />
+        <entry key="..\:/ws/app/src/main/res/layout/activity_main.xml" value="0.348019801980198" />
         <entry key="..\:/ws/app/src/main/res/layout/simple_list_item_1.xml" value="0.25" />
       </map>
     </option>
