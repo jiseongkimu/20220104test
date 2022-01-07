@@ -58,7 +58,7 @@ public class CommentAdapter extends  RecyclerView.Adapter<CommentAdapter.ViewHol
     static class ViewHolder extends RecyclerView.ViewHolder{
         TextView id;
         TextView reply;
-        TextView time;
+//        TextView time;
 
         /*
         * 생성자에는 뷰 객체가 전달된다. 그리고 전달 받은 이 객체를 부모 클래스의 변수에 담아두게 되는데 생성자 안에서 super() 메서드를 호출한다.
@@ -70,13 +70,13 @@ public class CommentAdapter extends  RecyclerView.Adapter<CommentAdapter.ViewHol
 
             id = itemView.findViewById(R.id.list_id);
             reply = itemView.findViewById(R.id.list_content);
-            time = itemView.findViewById(R.id.list_time);
+//            time = itemView.findViewById(R.id.list_time);
         }
 
         public void setItem(Comment item){
             id.setText(item.getId());
             reply.setText(item.getReply());
-            time.setText(item.getTime());
+//            time.setText(item.getTime());
         }
     }
     public void addItem(Comment item){

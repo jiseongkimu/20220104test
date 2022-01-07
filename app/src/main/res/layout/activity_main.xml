@@ -399,12 +399,12 @@
                 android:textColor="#FF5E00"
                 android:textSize="18sp"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@id/listview1"
+                app:layout_constraintBottom_toTopOf="@id/recyclerView"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/bgline_3" />
 
-            <ListView
-                android:id="@+id/listview1"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
                 app:layout_constraintLeft_toLeftOf="parent"
@@ -419,7 +419,7 @@
                 android:padding="10dp"
                 android:text="모두 보기"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/listview1" />
+                app:layout_constraintTop_toBottomOf="@id/recyclerView" />
 
             <View
                 android:id="@+id/bgline_4"

@@ -4,12 +4,12 @@ public class Comment {
 
     String id;
     String reply;
-    int time;
+//    int time;
 
-    public Comment(String id, String reply, int time) {
+    public Comment(String id, String reply) {
         this.id = id;
         this.reply = reply;
-        this.time = time;
+//        this.time = time;
     }
 
     public String getId() {
@@ -27,6 +27,7 @@ public class Comment {
     public void setReply(String reply) {
         this.reply = reply;
     }
+/*
 
     public int getTime() {
         return time;
@@ -35,6 +36,7 @@ public class Comment {
     public void setTime(int time) {
         this.time = time;
     }
+*/
 
 
 }
