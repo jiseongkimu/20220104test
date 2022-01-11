@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/review_list_borderline1"
+        android:layout_width="match_parent"
+        android:layout_height="13dp"
+        android:background="@drawable/borderline_gray"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/review_list_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="군도"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/review_list_borderline1" />
+
+    <ImageView
+        android:id="@+id/review_list_15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_15"
+        app:layout_constraintBottom_toTopOf="@id/review_list_borderline2"
+        app:layout_constraintLeft_toRightOf="@id/review_list_title"
+        app:layout_constraintTop_toBottomOf="@id/review_list_borderline1" />
+
+    <View
+        android:id="@+id/review_list_borderline2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/borderline_gray"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/review_list_title" />
+
+    <TextView
+        android:id="@+id/review_list_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="(1,124명 참여)"
+        android:textSize="18sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/review_list_borderline2" />
+
+    <TextView
+        android:id="@+id/review_list_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingRight="5dp"
+        android:text="8.2"
+        android:textSize="18sp"
+        app:layout_constraintRight_toLeftOf="@id/review_list_count"
+        app:layout_constraintTop_toBottomOf="@id/review_list_borderline2" />
+
+    <TextView
+        android:id="@+id/review_list_star"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="평점 이미지"
+        android:textSize="18sp"
+        app:layout_constraintRight_toLeftOf="@id/review_list_rating"
+        app:layout_constraintTop_toBottomOf="@id/review_list_borderline2" />
+
+    <View
+        android:id="@+id/review_list_borderline3"
+        android:layout_width="match_parent"
+        android:layout_height="13dp"
+        android:background="@drawable/borderline_gray"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/review_list_star" />
+
+    <TextView
+        android:id="@+id/rates"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="한줄평"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/review_list_borderline3" />
+
+    <ImageView
+        android:id="@+id/image_review"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:src="@drawable/ic_review_selected"
+        app:layout_constraintRight_toLeftOf="@id/review_write"
+        app:layout_constraintTop_toBottomOf="@id/review_list_borderline3" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/review_write"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_background"
+        android:paddingRight="5dp"
+        android:text="작성하기"
+        android:textColor="#FF5E00"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/recyclerView"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/review_list_borderline3" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rates" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

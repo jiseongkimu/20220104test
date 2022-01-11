@@ -3,6 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/androidStudioWorkspace/20220111_1/app/src/main/res/drawable/borderline_gray.xml" value="0.38229166666666664" />
+        <entry key="..\:/androidStudioWorkspace/20220111_1/app/src/main/res/layout/activity_main.xml" value="0.36614583333333334" />
+        <entry key="..\:/androidStudioWorkspace/20220111_1/app/src/main/res/layout/activity_review_list.xml" value="0.28125" />
+        <entry key="..\:/androidStudioWorkspace/20220111_1/app/src/main/res/layout/activity_review_list2.xml" value="0.36614583333333334" />
+        <entry key="..\:/androidStudioWorkspace/20220111_1/app/src/main/res/layout/activity_write_review.xml" value="0.36614583333333334" />
+        <entry key="..\:/androidStudioWorkspace/20220111_1/app/src/main/res/layout/activity_write_review2.xml" value="0.3515625" />
+        <entry key="..\:/androidStudioWorkspace/20220111_1/app/src/main/res/layout/simple_list_item_1.xml" value="0.2046875" />
         <entry key="..\:/ws/app/src/main/res/drawable/background.xml" value="0.25677083333333334" />
         <entry key="..\:/ws/app/src/main/res/drawable/borderline.xml" value="0.22083333333333333" />
         <entry key="..\:/ws/app/src/main/res/drawable/borderline_rectangle.xml" value="0.22083333333333333" />

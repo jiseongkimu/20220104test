@@ -10,6 +10,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.20220104test">
         <activity
+            android:name=".ReviewListActivity"
+            android:label="한줄평 목록"
+            android:exported="false" />
+        <activity
+            android:name=".WriteReviewActivity"
+            android:label="한줄평 작성"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
