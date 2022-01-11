@@ -110,8 +110,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
-                android:src="@drawable/ic_thumb_up"
-                android:background="@android:color/transparent"
+                android:background="@drawable/btn_thumbup_selector"
                 app:layout_constraintBottom_toTopOf="@+id/guideline_2"
                 app:layout_constraintLeft_toRightOf="@id/movie_image" />
 
@@ -133,8 +132,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
                 android:layout_marginLeft="20dp"
-                android:src="@drawable/ic_thumb_down"
-                android:background="@android:color/transparent"
+                android:background="@drawable/btn_thumbdown_selector"
                 app:layout_constraintBottom_toTopOf="@+id/guideline_2"
                 app:layout_constraintLeft_toRightOf="@id/up_count" />
 
@@ -353,7 +351,7 @@
                 android:id="@+id/makers_detail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="이재윤\n문진기, 홍현교"
+                android:text="  이재윤\n  문진기, 홍현교"
                 android:textSize="18sp"
                 app:layout_constraintLeft_toRightOf="@id/makers"
                 app:layout_constraintTop_toBottomOf="@id/makers_title" />
@@ -389,46 +387,50 @@
                 app:layout_constraintRight_toLeftOf="@id/review_write"
                 app:layout_constraintTop_toBottomOf="@id/bgline_3" />
 
-            <TextView
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/review_write"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp"
+                style="?android:attr/borderlessButtonStyle"
+                android:background="@drawable/button_background"
+                android:paddingRight="5dp"
                 android:text="작성하기"
                 android:textColor="#FF5E00"
                 android:textSize="18sp"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@id/simple_rates"
+                app:layout_constraintBottom_toTopOf="@id/recyclerView"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/bgline_3" />
 
-            <View
-                android:id="@+id/simple_rates"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
-                android:background="#ffffff"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/rates" />
 
-            <Button
-                android:id="@+id/watch_review"
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/see_all"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:layout_marginBottom="30dp"
+                android:background="@drawable/button_see_all"
                 android:padding="10dp"
                 android:text="모두 보기"
+                android:textColor="#A566FF"
+                android:textSize="18sp"
+                android:textStyle="bold"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/simple_rates" />
+                app:layout_constraintTop_toBottomOf="@id/recyclerView" />
 
             <View
                 android:id="@+id/bgline_4"
                 android:layout_width="match_parent"
                 android:layout_height="10dp"
+                android:layout_marginTop="10dp"
                 android:background="#EAEAEA"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/watch_review" />
+                app:layout_constraintTop_toBottomOf="@id/see_all" />
 
 
             <ImageView
@@ -449,14 +451,15 @@
                 app:layout_constraintLeft_toRightOf="@id/facebook"
                 app:layout_constraintTop_toBottomOf="@id/bgline_4" />
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/buy"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
+                android:layout_margin="15dp"
+                android:background="@drawable/button_buy"
                 android:text="예매하기"
                 android:textSize="20sp"
+                android:textColor="#ffffff"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toRightOf="@id/kakao"
                 app:layout_constraintRight_toRightOf="parent"

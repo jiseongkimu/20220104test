@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">20220104test</string>
+    <string name="id" style="font-weight:bold; font-size:1em;">kimsula18*****</string>
+    <string name="time" style="font-size:1em; color:gray; font-weight:bold;">28분전</string>
+    <string name="content">영화는 재밌는데 같이 보러 온 사람이 재미없어요.</string>
+    <string name="like">추천</string>
+    <string name="like_count">0</string>
+    <string name="report">신고하기</string>
 </resources>
